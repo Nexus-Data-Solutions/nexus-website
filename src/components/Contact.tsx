@@ -2,7 +2,7 @@
 
 // src/components/Contact.tsx
 import React from 'react';
-import { Mail, Phone, MapPin, Calendar } from 'lucide-react';
+import { Mail, Calendar } from 'lucide-react';
 
 const Contact = () => {
     const handleEmailClick = () => {
@@ -56,7 +56,7 @@ const Contact = () => {
 
                     {/* Contact Card */}
                     <div className="bg-white p-8 rounded-xl shadow-lg">
-                        <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+                        <h3 className="text-2xl font-semibold mb-6">Lets Connect</h3>
                         <div className="space-y-4">
                             <button
                                 onClick={handleScheduleClick}

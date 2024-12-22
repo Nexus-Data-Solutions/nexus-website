@@ -3,16 +3,12 @@
 // src/app/careers/page.tsx
 import React from 'react';
 import {
-    Building2,
-    Users,
     Brain,
-    Briefcase,
     Globe,
     Clock,
     Trophy,
     ArrowRight
 } from 'lucide-react';
-import Link from 'next/link';
 
 const CareersPage = () => {
     const benefits = [
