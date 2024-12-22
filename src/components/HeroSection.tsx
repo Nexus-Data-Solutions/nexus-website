@@ -1,6 +1,7 @@
 // src/components/HeroSection.tsx
 import React from 'react';
 import { ArrowRight, Brain, Network, Users } from 'lucide-react';
+import Image from 'next/image';
 
 const HeroSection = () => {
     return (
@@ -41,7 +42,7 @@ const HeroSection = () => {
                         </div>
 
                         <div className="relative h-48 bg-gray-100 rounded-xl overflow-hidden">
-                            <img
+                            <Image
                                 src="/api/placeholder/400/320"
                                 alt="AI Visualization"
                                 className="w-full h-full object-cover"

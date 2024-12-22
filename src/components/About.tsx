@@ -10,7 +10,7 @@ const About = () => {
                         <div>
                             <h2 className="text-4xl font-bold mb-6">About Nexus Data Solutions</h2>
                             <p className="text-xl text-gray-600 mb-8">
-                                We are pioneering the future of AI development through expert human feedback and data labeling services. Our mission is to enhance AI models' performance, safety, and reliability.
+                                We are pioneering the future of AI development through expert human feedback and data labeling services. Our mission is to enhance AI models performance, safety, and reliability.
                             </p>
                         </div>
 
