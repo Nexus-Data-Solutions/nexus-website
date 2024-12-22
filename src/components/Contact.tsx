@@ -1,51 +1,82 @@
-import React from 'react'
-import { Mail, Phone, MapPin } from 'lucide-react'
+'use client';
+
+// src/components/Contact.tsx
+import React from 'react';
+import { Mail, Phone, MapPin, Calendar } from 'lucide-react';
 
 const Contact = () => {
+    const handleEmailClick = () => {
+        // Prepare email parameters
+        const email = 'contact@nexusdatasolution.org';
+        const subject = 'Inquiry about RLHF Data Services';
+
+        // Create mailto link
+        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+    };
+
+    const handleScheduleClick = () => {
+        window.open('https://calendly.com/ismail-nexusdatasolution/30min', '_blank');
+    };
+
     return (
-        <section className="py-20">
+        <section id="contact" className="py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-6">
-                <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
+                    <p className="text-xl text-gray-600">
+                        Ready to enhance your AI with quality human feedback? Contact us today.
+                    </p>
+                </div>
+
                 <div className="grid md:grid-cols-2 gap-12">
+                    {/* Contact Information */}
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">Get in Touch</h3>
-                        <p className="text-gray-600">Ready to enhance your AI with quality human feedback? Contact us today.</p>
-                        <div className="space-y-4">
-                            <div className="flex items-center gap-3">
-                                <Mail className="text-blue-600" />
-                                <span>contact@nexusdatasolutions.com</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <Phone className="text-blue-600" />
-                                <span>+1 (555) 123-4567</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <MapPin className="text-blue-600" />
-                                <span>Your Business Address</span>
-                            </div>
+                        <div className="flex items-center gap-4">
+                            <Mail className="w-6 h-6 text-blue-600" />
+                            <a
+                                href="mailto:contact@nexusdatasolution.org"
+                                className="text-lg hover:text-blue-600 transition-colors"
+                            >
+                                contact@nexusdatasolution.org
+                            </a>
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                            <Calendar className="w-6 h-6 text-blue-600" />
+                            <a
+                                href="https://calendly.com/ismail-nexusdatasolution/30min"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-lg hover:text-blue-600 transition-colors"
+                            >
+                                Schedule a Meeting
+                            </a>
                         </div>
                     </div>
-                    <form className="space-y-4">
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Name</label>
-                            <input type="text" className="w-full p-3 border rounded-lg" />
+
+                    {/* Contact Card */}
+                    <div className="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+                        <div className="space-y-4">
+                            <button
+                                onClick={handleScheduleClick}
+                                className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                            >
+                                Schedule a Consultation
+                            </button>
+
+                            <button
+                                onClick={handleEmailClick}
+                                className="block w-full bg-gray-100 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-200 transition-colors"
+                            >
+                                Send Email
+                            </button>
                         </div>
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" className="w-full p-3 border rounded-lg" />
-                        </div>
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Message</label>
-                            <textarea className="w-full p-3 border rounded-lg h-32"></textarea>
-                        </div>
-                        <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                            Send Message
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default Contact;

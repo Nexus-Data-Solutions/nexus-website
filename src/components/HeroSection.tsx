@@ -1,12 +1,47 @@
-// src/components/HeroSection.tsx
+'use client';
+
 import React from 'react';
-import { ArrowRight, Brain, Network, Users } from 'lucide-react';
-import Image from 'next/image';
+import { ArrowRight, Brain, Users, Network } from 'lucide-react';
 
 const HeroSection = () => {
+    const cards = [
+        {
+            icon: <Brain className="w-12 h-12 text-blue-600" />,
+            title: "AI Training",
+            description: "Enhanced machine learning through quality data"
+        },
+        {
+            icon: <Users className="w-12 h-12 text-purple-600" />,
+            title: "Human Feedback",
+            description: "Expert labeling teams"
+        },
+        {
+            icon: <Network className="w-12 h-12 text-green-600" />,
+            title: "Data Quality",
+            description: "Rigorous validation processes"
+        },
+        {
+            icon: (
+                <svg className="w-12 h-12" viewBox="0 0 100 100">
+                    <circle cx="30" cy="30" r="20" fill="#4F46E5" opacity="0.7" />
+                    <circle cx="70" cy="70" r="20" fill="#7C3AED" opacity="0.7" />
+                    <circle cx="70" cy="30" r="20" fill="#2563EB" opacity="0.7" />
+                    <line x1="30" y1="30" x2="70" y2="70" stroke="#4F46E5" strokeWidth="4" opacity="0.5" />
+                    <line x1="70" y1="30" x2="30" y2="30" stroke="#4F46E5" strokeWidth="4" opacity="0.5" />
+                    <line x1="70" y1="30" x2="70" y2="70" stroke="#4F46E5" strokeWidth="4" opacity="0.5" />
+                </svg>
+            ),
+            title: "AI Visualization",
+            description: "Interactive data representation"
+        }
+    ];
+
     return (
-        <div className="relative w-full">
-            <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto px-6 py-12 gap-8">
+        // Add pt-20 to account for fixed header height and additional spacing
+        <div className="relative w-full bg-white">
+            {/* Add top padding to create space below the header */}
+            <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto px-6 py-32 gap-12">
+                {/* Left Content */}
                 <div className="lg:w-1/2 space-y-6">
                     <h1 className="text-5xl font-bold text-gray-900">
                         Shaping the Future of AI Through Human Insight
@@ -19,35 +54,19 @@ const HeroSection = () => {
                     </button>
                 </div>
 
-                <div className="lg:w-1/2 relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl opacity-50" />
-
-                    <div className="relative grid grid-cols-2 gap-4 p-8">
-                        <div className="bg-white p-6 rounded-xl shadow-lg">
-                            <Brain className="w-12 h-12 text-blue-600 mb-4" />
-                            <h3 className="font-semibold">AI Training</h3>
-                            <p className="text-sm text-gray-600">Enhanced machine learning through quality data</p>
-                        </div>
-
-                        <div className="bg-white p-6 rounded-xl shadow-lg mt-8">
-                            <Users className="w-12 h-12 text-purple-600 mb-4" />
-                            <h3 className="font-semibold">Human Feedback</h3>
-                            <p className="text-sm text-gray-600">Expert labeling teams</p>
-                        </div>
-
-                        <div className="bg-white p-6 rounded-xl shadow-lg">
-                            <Network className="w-12 h-12 text-green-600 mb-4" />
-                            <h3 className="font-semibold">Data Quality</h3>
-                            <p className="text-sm text-gray-600">Rigorous validation processes</p>
-                        </div>
-
-                        <div className="relative h-48 bg-gray-100 rounded-xl overflow-hidden">
-                            <Image
-                                src="/api/placeholder/400/320"
-                                alt="AI Visualization"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
+                {/* Right Visual Section - Card Grid */}
+                <div className="lg:w-1/2">
+                    <div className="grid grid-cols-2 gap-4">
+                        {cards.map((card, index) => (
+                            <div
+                                key={index}
+                                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-start h-full"
+                            >
+                                <div className="mb-4">{card.icon}</div>
+                                <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
+                                <p className="text-sm text-gray-600">{card.description}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
