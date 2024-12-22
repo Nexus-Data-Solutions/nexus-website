@@ -101,10 +101,10 @@ const CareersPage = () => {
             <section className="pt-20 pb-12 bg-gradient-to-r from-blue-600 to-purple-600">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                        Join Our Mission to Shape AI's Future
+                        Join Our Mission to Shape AIs Future
                     </h1>
                     <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-                        We're looking for talented individuals passionate about improving AI through human feedback
+                        Were looking for talented individuals passionate about improving AI through human feedback
                     </p>
                 </div>
             </section>
@@ -189,10 +189,10 @@ const CareersPage = () => {
             {/* Application CTA */}
             <section className="py-20 text-center">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold mb-4">Don't see the perfect role?</h2>
+                    <h2 className="text-3xl font-bold mb-4">Dont see the perfect role?</h2>
                     <p className="text-xl text-gray-600 mb-8">
-                        We're always looking for talented individuals to join our team.
-                        Send us your application and let's discuss how you can contribute to our mission.
+                        Were always looking for talented individuals to join our team.
+                        Send us your application and lets discuss how you can contribute to our mission.
                     </p>
                     <a
                         href="https://apply.workable.com/nexus-data-solution/"
