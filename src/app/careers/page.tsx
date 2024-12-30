@@ -51,7 +51,7 @@ const CareersPage = () => {
                 "Good written and verbal communication",
                 "Interest in AI and machine learning"
             ],
-            applyLink: "https://apply.workable.com/nexus-data-solution/"
+            applyLink: "https://apply.workable.com/nexus-data-solution-1/"
         },
         {
             title: "Senior Data Quality Analyst",
@@ -69,7 +69,7 @@ const CareersPage = () => {
                 "Strong leadership skills",
                 "Statistical analysis background"
             ],
-            applyLink: "https://apply.workable.com/nexus-data-solution/"
+            applyLink: "https://apply.workable.com/nexus-data-solution-1/"
         },
         {
             title: "AI Project Manager",
@@ -87,7 +87,7 @@ const CareersPage = () => {
                 "Excellent communication skills",
                 "Experience with remote teams"
             ],
-            applyLink: "https://apply.workable.com/nexus-data-solution/"
+            applyLink: "https://apply.workable.com/nexus-data-solution-1/"
         }
     ];
 
@@ -191,7 +191,7 @@ const CareersPage = () => {
                         Send us your application and lets discuss how you can contribute to our mission.
                     </p>
                     <a
-                        href="https://apply.workable.com/nexus-data-solution/"
+                        href="https://apply.workable.com/nexus-data-solution-1/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors gap-2"
